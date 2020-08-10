@@ -60,8 +60,8 @@ if ($status !== 200) {
     die();
 }
 $data = json_decode($result);
-$body = 'Fetched: ' . date('Y/m/d H:i:s') . ' - Asia/Manila Time' . PHP_EOL;
-$body .= "Command: wget \"https://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}\" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys" . PHP_EOL . PHP_EOL;
+$body = '# Fetched: ' . date('Y/m/d H:i:s') . ' - Asia/Manila Time' . PHP_EOL;
+$body .= "# Command: wget \"https://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}\" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys" . PHP_EOL . PHP_EOL;
 foreach ($data as $datum) {
     $body .= '# From ' . $source . ' - Key ID #' . $datum->id . PHP_EOL . $datum->key . PHP_EOL;
 }
