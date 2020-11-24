@@ -8,13 +8,13 @@ On a cron job, you could do:
 
 ```
 # For GitHub
-0 0 * * * /usr/bin/wget https://your.app/keys.php?source=github&username=yourusername" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys
+0 0 * * * /usr/bin/wget https://your.app/?source=github&username=yourusername" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys
 
 # For GitLab (on GitLab.com)
-0 0 * * * /usr/bin/wget https://your.app/keys.php?source=gitlab&username=yourusername" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys
+0 0 * * * /usr/bin/wget https://your.app/?source=gitlab&username=yourusername" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys
 
 # For GitLab (self-hosted)
-0 0 * * * /usr/bin/wget https://your.app/keys.php?source=gitlab&username=yourusername&host=yourinstancehost" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys
+0 0 * * * /usr/bin/wget https://your.app/?source=gitlab&username=yourusername&host=yourinstancehost" -O ~/.ssh/authorized_keys && chmod 0600 ~/.ssh/authorized_keys
 ```
 
 The formatter already returns a `Content-Type: text/plain` response.
